@@ -5,9 +5,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha o container no topo */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+    padding: 10px; /* Adiciona um pequeno padding ao redor da página */
 }
 
 /* Container principal */
@@ -16,14 +17,16 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    max-width: 400px; /* Define uma largura máxima para o container */
     text-align: center;
+    margin-top: 20px; /* Adiciona uma margem no topo */
 }
 
 /* Título */
 h1 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduz a margem inferior */
     color: #333;
 }
 
@@ -41,11 +44,12 @@ label {
 
 input[type="number"],
 select {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 8px; /* Reduz o padding */
+    margin-bottom: 10px; /* Reduz a margem inferior */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    width: 100%; /* Ocupa 100% da largura disponível */
 }
 
 button {
@@ -56,6 +60,7 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    width: 100%; /* Ocupa 100% da largura disponível */
 }
 
 button:hover {
@@ -64,11 +69,31 @@ button:hover {
 
 /* Resultado */
 #resultado {
-    margin-top: 20px;
+    margin-top: 15px; /* Reduz a margem superior */
     font-size: 16px;
     color: #333;
 }
 
 #resultado p {
     margin: 5px 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Reduz o padding em telas pequenas */
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    input[type="number"],
+    select {
+        padding: 6px; /* Reduz o padding em telas pequenas */
+    }
+
+    button {
+        padding: 8px; /* Reduz o padding em telas pequenas */
+    }
 }
