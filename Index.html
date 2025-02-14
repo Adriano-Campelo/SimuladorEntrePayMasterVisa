@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calculadora de Taxas de EntrePay Master e Visa</title>
+	<title>Calculadora de Taxas de Máquina no Cartão</title>
 	<!-- Link para o arquivo CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +10,7 @@
 		<h1>Calculadora de Taxas de Máquina no Cartão</h1>
 		<form onsubmit="calcularValorTotal(event)">
 			<label>Valor de Venda:</label>
-			<input type="number" id="valor_venda" required><br><br>
+			<input type="number" id="valor_venda" step="0.01" required><br><br>
 			<label>Quantidade de Vezes:</label>
 			<select id="quantidade_vezes" required>
 				<option value="1">1x</option>
@@ -39,6 +39,11 @@
 		</form>
 		<div id="resultado"></div>
 	</div>
+
+	<!-- Inclua o arquivo JavaScript externo -->
+	<script src="script.js"></script>
+</body>
+</html>
 
 	<!-- Inclua o arquivo JavaScript externo -->
 	<script src="script.js"></script>
