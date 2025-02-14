@@ -28,14 +28,22 @@ function calcularValorTotal(event) {
 	event.preventDefault(); // Impede o recarregamento da página
 
 	// Obtém os valores do formulário
-	const valorVenda = parseFloat(document.getElementById("valor_venda").value);
-	const quantidadeVezes = parseInt(document.getElementById("quantidade_vezes").value);
+	const valorVendaInput = document.getElementById("valor_venda");
+	let valorVenda = parseFloat(valorVendaInput.value);
 
 	// Verifica se o valor de venda é válido
 	if (isNaN(valorVenda) || valorVenda <= 0) {
 		alert("Por favor, insira um valor de venda válido.");
 		return;
 	}
+
+	// Arredonda o valor para duas casas decimais
+	valorVenda = Math.round(valorVenda * 100) / 100;
+
+	// Atualiza o valor no campo de input (caso o usuário tenha digitado mais de duas casas decimais)
+	valorVendaInput.value = valorVenda.toFixed(2);
+
+	const quantidadeVezes = parseInt(document.getElementById("quantidade_vezes").value);
 
 	// Obtém a taxa de juros correspondente
 	const taxaJuros = taxasJuros[quantidadeVezes];
