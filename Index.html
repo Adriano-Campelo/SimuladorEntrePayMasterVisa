@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Taxas de EntrePay Master e Visa</title>
+	<!-- Link para o arquivo CSS -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Calculadora de Taxas de Máquina no Cartão</h1>
+		<form onsubmit="calcularValorTotal(event)">
+			<label>Valor de Venda:</label>
+			<input type="number" id="valor_venda" required><br><br>
+			<label>Quantidade de Vezes:</label>
+			<select id="quantidade_vezes" required>
+				<option value="1">1x</option>
+				<option value="2">2x</option>
+				<option value="3">3x</option>
+				<option value="4">4x</option>
+				<option value="5">5x</option>
+				<option value="6">6x</option>
+				<option value="7">7x</option>
+				<option value="8">8x</option>
+				<option value="9">9x</option>
+				<option value="10">10x</option>
+				<option value="11">11x</option>
+				<option value="12">12x</option>
+				<option value="13">13x</option>
+				<option value="14">14x</option>
+				<option value="15">15x</option>
+				<option value="16">16x</option>
+				<option value="17">17x</option>
+				<option value="18">18x</option>
+				<option value="19">19x</option>
+				<option value="20">20x</option>
+				<option value="21">21x</option>
+			</select><br><br>
+			<button type="submit">Calcular</button>
+		</form>
+		<div id="resultado"></div>
+	</div>
+
+	<!-- Inclua o arquivo JavaScript externo -->
+	<script src="script.js"></script>
+</body>
+</html>
